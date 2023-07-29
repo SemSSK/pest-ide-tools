@@ -15,7 +15,7 @@
       in
       {
         defaultPackage = naersk-lib.buildPackage {
-          src = ./language-server/;
+          src = ./.;
           nativeBuildInputs = with pkgs; [ pkg-config ];
           buildInputs = with pkgs; [ openssl ];
         };
@@ -24,6 +24,7 @@
             pkg-config
             rust-bin.stable.latest.default
             udev
+            openssl
           ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
         };
