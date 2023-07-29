@@ -19,8 +19,7 @@
           buildInputs = [
             pkg-config
             rust-bin.stable.latest.default
-            udev            
-            protobuf
+            udev
           ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
         };
